@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/auth.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/tasks.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/auth",
+      "dest": "/api/auth.js"
+    },
+    {
+      "src": "/api/tasks",
+      "dest": "/api/tasks.js"
+    }
+  ],
+  "env": {
+    "JWT_SECRET": "your_jwt_secret_here",
+    "MONGO_URI": "your_mongodb_uri_here"
+  }
+}
