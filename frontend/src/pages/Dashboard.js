@@ -13,13 +13,16 @@ const Dashboard = () => {
       const token = localStorage.getItem("token"); // token ko localStorage se fetch kiya
 
       try {
-        const response = await fetch("http://localhost:5000/api/tasks", {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${token}`, // token ko request headers me bheja
-            "Content-Type": "application/json",
-          },
-        });
+        const response = await fetch(
+          "https://w3villa-taskmanager-backend.onrender.com/api/tasks",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`, // token ko request headers me bheja
+              "Content-Type": "application/json",
+            },
+          }
+        );
         if (response.ok) {
           const data = await response.json();
           setTasks(data); // tasks ko state me set kiya
@@ -41,17 +44,20 @@ const Dashboard = () => {
     if (taskName && taskDesc) {
       const token = localStorage.getItem("token"); // token ko localStorage se nikala
       try {
-        const response = await fetch("http://localhost:5000/api/tasks", {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${token}`, // token ko request headers me include kiya
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: taskName, // task ka naam
-            description: taskDesc, // task ka description
-          }),
-        });
+        const response = await fetch(
+          "https://w3villa-taskmanager-backend.onrender.com/api/tasks",
+          {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${token}`, // token ko request headers me include kiya
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: taskName, // task ka naam
+              description: taskDesc, // task ka description
+            }),
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();
@@ -78,7 +84,7 @@ const Dashboard = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tasks/${taskId}`,
+        `https://w3villa-taskmanager-backend.onrender.com/api/tasks/${taskId}`,
         {
           method: "DELETE",
           headers: {
@@ -107,7 +113,7 @@ const Dashboard = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/api/tasks/${editingTaskId}`,
+          `https://w3villa-taskmanager-backend.onrender.com/api/tasks/${editingTaskId}`,
           {
             method: "PUT",
             headers: {

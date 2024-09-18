@@ -26,7 +26,8 @@ const RegisterPage = () => {
       return;
     }
 
-    const apiUrl = "http://localhost:5000/api/auth/register"; // Replace with your actual endpoint
+    const apiUrl =
+      "https://w3villa-taskmanager-backend.onrender.com/api/auth/register"; // Replace with your actual endpoint
 
     try {
       const response = await fetch(apiUrl, {
