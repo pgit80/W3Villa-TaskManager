@@ -27,7 +27,7 @@ app.use(
 );
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://w3villa-taskmanager.onrender.com/",
   credentials: true,
 };
 app.use(cors(corsOptions));
