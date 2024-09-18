@@ -22,6 +22,6 @@
   ],
   "env": {
     "JWT_SECRET": "your_jwt_secret_here",
-    "MONGO_URI": "your_mongodb_uri_here"
+    "MONGO_URI": "mongodb+srv://pgit80:j3o5wYY2eRXTlZCE@taskmanager.qhg2d.mongodb.net/ghoda?retryWrites=true&w=majority&appName=TaskManager"
   }
 }
