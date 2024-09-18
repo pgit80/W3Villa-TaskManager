@@ -1,12 +1,61 @@
-This is Task Manager created for Assignment Submission at W3Villa Technologies.
 
-# To Run the project->
- - Clone the Github Repo
- - Open the Directory where the Repo is Cloned
- - cd frontend -> npm i -> npm start
- - In a new terminal -> cd backend -> npm i -> npm start
+# W3 Task Manager
 
-Project will run on localhost.
-Then you will able to register yourself, login on the website, apply CRUD operations on the Tasks.
+Welcome to the Task Manager web application, designed to manage tasks effectively with features like user registration, login, and full CRUD operations on tasks.
 
+
+## Features
+
+- ✅ User Registration and Login
+- ✅ Task Management (Create, Read, Update, Delete)
+- 🔒 JWT-based Authentication
+- 💻 Responsive UI with React
+- 🗄️ MongoDB Atlas Cloud Database
+
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React (JavaScript)
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB Atlas (Cloud)
+- **Authentication**: JSON Web Tokens (JWT)
+- **Password Hashing**: bcrypt
+
+
+## Demo
+
+You can try out the live demo here: https://w3villa-taskmanager.onrender.com/
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/pgit80/W3Villa-TaskManager
+```
+
+Go to the project directory
+
+```bash
+  cd TaskManager/frontend
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+Do the same for backend also
+
+
+## 🚀 About Me
+Know more About me at: https://pgit.journoportfolio.com
 
