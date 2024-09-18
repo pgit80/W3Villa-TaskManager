@@ -2,26 +2,19 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/auth.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/tasks.js",
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/auth",
-      "dest": "/api/auth.js"
-    },
-    {
-      "src": "/api/tasks",
-      "dest": "/api/tasks.js"
+      "src": "/api/(.*)",
+      "dest": "/server.js"
     }
   ],
   "env": {
-    "JWT_SECRET": "your_jwt_secret_here",
-    "MONGO_URI": "mongodb+srv://pgit80:j3o5wYY2eRXTlZCE@taskmanager.qhg2d.mongodb.net/ghoda?retryWrites=true&w=majority&appName=TaskManager"
+    "MONGO_URI": "mongodb+srv://pgit80:j3o5wYY2eRXTlZCE@taskmanager.qhg2d.mongodb.net/ghoda?retryWrites=true&w=majority&appName=TaskManager",
+    "JWT_SECRET": "your_jwt_secret_key",
+    "SESSION_SECRET": "@session_secret"
   }
 }
